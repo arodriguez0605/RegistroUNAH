@@ -30,13 +30,17 @@
 
      	
 
-     	public static function obtenerDepartamentos($conexion){
-			$resultado = $conexion->ejecutarConsulta('SELECT nombreDepartamento FROM Departamento');
+     	public static function obtenerDepartamentos($conexion,$codigoCentro){
+			$resultado = $conexion->ejecutarConsulta(
+						'SELECT d.NOMBREDEPARTAMENTO FROM Departamento d INNER JOIN Ciudad c ON d.CODIGODEPARTAMENTO = c.CODIGODEPARTAMENTO
+						INNER JOIN CentroEstudio ce ON c.CODIGOCIUDAD = ce.CODIGOCIUDAD
+						WHERE ce.CODIGOCENTROESTUDIO ='.$codigoCentro
+					);
 
 		
 			while (($fila= $conexion->obtenerFila($resultado))) {
 				
-				echo '<option>'.$fila['NOMBREDEPARTAMENTO'].' </option>';
+				echo $fila['NOMBREDEPARTAMENTO'];
 			}
 				
 		}

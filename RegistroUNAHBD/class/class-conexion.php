@@ -16,9 +16,9 @@
 	
 
 	public function ejecutarConsulta($sql){
-			$queryDepartamento = oci_parse($this->link,$sql);
-			 oci_execute($queryDepartamento);
-            return $queryDepartamento;
+			$query = oci_parse($this->link,$sql);
+			 oci_execute($query);
+            return $query;
 		}
 
 

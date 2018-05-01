@@ -220,7 +220,7 @@
 <div class="form-group row">
   <label for="example-tel-input" class="col-2 col-form-label">Centro de Estudio</label>
   <div class="col-10">
-      <select>
+      <select id="slc-centroEstudio">
       <option class="form-control" >Seleccione un centro de estudio</option>
           <option class="form-control" value="" id="centroEstudio" name="centroEstudio"</option>
       </select>
@@ -233,9 +233,9 @@
   </div>
 </div>
 <div class="form-group row">
-  <label for="example-tel-input" class="col-2 col-form-label">Departamento</label>
+  <label for="example-tel-input"  class="col-2 col-form-label">Departamento</label>
   <div class="col-10">
-    <label class="form-control" type="example-text-input" id="departamento" name="departamento">
+    <label class="form-control" type="example-text-input" id="departamento" name="departamento"></label>
   </div>
 </div>
 <div class="form-group row">
@@ -286,7 +286,7 @@
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+    <script src="js/jmfunciones.js"></script>
   </body>
 
 </html>

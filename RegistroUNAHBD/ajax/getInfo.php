@@ -23,6 +23,11 @@
 		Carrera::obtenerCarreras($conexion);
 		break;
 
+		case 'facultades':
+			include('../class/class-facultad.php');
+			Facultad::obtenerFacultad($conexion,$_POST["slc-carreras"]);
+			break;
+
 		default:
 			echo "Acción inválida";
 			break;

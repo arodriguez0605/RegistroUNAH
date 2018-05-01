@@ -34,6 +34,8 @@ $.ajax({
 });
 
 
+
+
 $("#slc-centroEstudio").click(function(){
 
         var parametro = "slc-centroEstudio="+ $('#slc-centroEstudio').val();
@@ -68,3 +70,75 @@ $("#slc-centroEstudio").click(function(){
  });
 
 });
+
+
+
+
+
+$("#btn-iniciar-sesion-estudiante").click(function(){
+
+	if ($("#txt-cuenta").val()) {
+
+		if ($("#txt-password").val()) {
+
+					 var parametros = "txt-cuenta="+$("#txt-cuenta").val()+"&"+"txt-password="+$("#txt-password").val();
+
+       						$.ajax({
+        					url:"ajax/gestion-usuario.php?accion=login",
+       						 data: parametros,
+       						 method:"POST",
+        					
+        					success:function(respuesta){
+        						
+        					$("#div-prueba").html(respuesta);	
+        					alert(respuesta);
+         					/*if(respuesta.estatus==1)
+         						{
+          							alert("regreso.");
+           						 
+             					 window.location = "registro.php";
+            						
+						         }
+         						else
+           							{
+            							alert("usuario no encontrado.");
+           							}*/
+        						},
+
+        						error:function(e){
+         						 $("#div-prueba").html(e);
+         						 alert(e);
+         						 console.log(e);
+         						 
+       							 }
+
+       							});
+     							 }
+     						 }
+	else{
+		alert("ingrese datos.");
+	}
+
+});
+
+
+
+$("#slc-carreras").click(function(){
+
+        var parametro = "slc-carreras="+ $('#slc-carreras').val();
+		$.ajax({
+ 		url:"ajax/getInfo.php?accion=facultades",
+        data:parametro,
+        method:"POST",
+        success:function(respuesta){
+
+          $("#facultad").html(respuesta);
+        },
+        error:function(e){
+
+           console.log(e);
+        }
+
+ });
+
+ });

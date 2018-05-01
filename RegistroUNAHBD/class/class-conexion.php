@@ -31,5 +31,14 @@
 			oci_close($this->link);
 		}
 
+
+		public function antiInyeccion($texto){
+			return PDO::prepare($this->link, $texto);
+		}
+
+		public function cantidadRegistros($resultado){
+			return oci_num_rows($resultado);
+		}
+
     }
 ?>

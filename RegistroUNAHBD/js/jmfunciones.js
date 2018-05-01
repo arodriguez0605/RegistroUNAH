@@ -15,6 +15,22 @@ $.ajax({
 
  });
 
+
+	$.ajax({
+ url:"ajax/getInfo.php?accion=carreras",
+        data:"",
+        method:"POST",
+        success:function(respuesta){
+
+          $("#slc-carreras").html(respuesta);
+        },
+        error:function(e){
+
+           console.log(e);
+        }
+
+ });
+
 });
 
 

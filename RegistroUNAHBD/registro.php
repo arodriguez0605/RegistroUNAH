@@ -241,7 +241,7 @@
 <div class="form-group row">
   <label for="example-tel-input" class="col-2 col-form-label">Carrera</label>
   <div class="col-10">
-      <select>
+      <select id="slc-carreras">
       <option class="form-control" >Seleccione su carrera</option>
           <option class="form-control" value="" id="carrera" name="carrera"</option>
       </select>

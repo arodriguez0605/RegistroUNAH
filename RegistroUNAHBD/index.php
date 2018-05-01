@@ -185,15 +185,13 @@
             <div class="card-body">
               <p class="card-text">¿Aún no posees una cuenta? Registrate de manera rápida y fácil y sé parte de la familia puma.</p>
             </div>
-            <a href = "registro.php">
             <div class="card-footer">
                                     <div class="container-login100-form-btn">
-            <button class="login100-form-btn">
+            <button class="login100-form-btn" onclick="location.href='registro.php'">
               Registrarse 
             </button>
           </div>
             </div>
-          </a>
           </div>
         </div>
         <div class="col-lg-4 mb-4">
@@ -204,7 +202,7 @@
             </div>
             <div class="card-footer">
                                     <div class="container-login100-form-btn">
-            <button class="login100-form-btn">
+            <button class="login100-form-btn" onclick="location.href='loginestudiante.php'">
                Matricularse
             </button>
           </div>

@@ -87,28 +87,28 @@
           <img src="img/imgunah/logo2.png" alt="IMG"> 
         </div>
 
-        <form class="login100-form validate-form">
+<div>
           <div class="container-login100-form-btn">
-            <button class="login100-form-btn">
+            <button class="login100-form-btn" onclick="location.href='.php'">
               Adicionar Asignatura
             </button>
           </div>
 
           <div class="container-login100-form-btn">
-            <button class="login100-form-btn">
+            <button class="login100-form-btn" onclick="location.href='.php'">
               Cancelar Asignatura
             </button>
           </div>
 
           
           <div class="container-login100-form-btn">
-            <button class="login100-form-btn">
+            <button class="login100-form-btn" onclick="location.href='historial.php'">
               Historial Académico
             </button>
           </div>
 
           <div class="container-login100-form-btn">
-            <button class="login100-form-btn">
+            <button class="login100-form-btn" onclick="location.href='forma03.php'">
              Forma 03
             </button>
           </div>
@@ -116,7 +116,7 @@
         </form>
       </div>
     </div>
-  </div>
+  </div></div>
   
       <!-- Footer -->
     <footer class="py-5 bg-dark">

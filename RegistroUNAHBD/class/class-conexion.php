@@ -39,6 +39,7 @@
 
 		public function cantidadRegistros($resultado){
 			return oci_num_rows($resultado);
+			
 		}
 
     }

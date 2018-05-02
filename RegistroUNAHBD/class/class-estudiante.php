@@ -14,6 +14,7 @@
 		private $fechaNacimiento;
 		private $centroEstudio;
 		private $fechaIngreso;
+		private $carrera;
 
 		public function __construct($pNOmbre,
 					$sNombre,
@@ -26,7 +27,7 @@
 					$contrasena,
 					$fechaNacimiento,
 					$centroEstudio,
-					$fechaIngreso){
+					$fechaIngreso,$carrera){
 			$this->pNOmbre = $pNOmbre;
 			$this->sNombre = $sNombre;
 			$this->pApellido = $pApellido;
@@ -39,6 +40,7 @@
 			$this->fechaNacimiento = $fechaNacimiento;
 			$this->centroEstudio = $centroEstudio;
 			$this->fechaIngreso = $fechaIngreso;
+			$this->carrera = $carrera;
 		}
 		public function getPNOmbre(){
 			return $this->pNOmbre;
@@ -145,6 +147,7 @@
  					 PNCODIGOUSUARIO NUMBER;
   					PNCODIGOCENTROESTUDIO NUMBER;
   					PNACCION NUMBER;
+  					PNCODIGOCARRERA NUMBER;
   					MENSAJEERROR VARCHAR2(200);
 			BEGIN
   					PNCODIGOPERSONA := NULL;
@@ -161,6 +164,7 @@
   					PNCODIGOUSUARIO := NULL;
   					PNCODIGOCENTROESTUDIO := ".$this->centroEstudio.";
   					PNACCION := NULL;
+  					PNCODIGOCARRERA := ".$this->carrera.";
 
   					SP_REGISTRO_DE_ESTUDIANTE(
    					 PNCODIGOPERSONA => PNCODIGOPERSONA,
@@ -177,6 +181,7 @@
     				PNCODIGOUSUARIO => PNCODIGOUSUARIO,
     				PNCODIGOCENTROESTUDIO => PNCODIGOCENTROESTUDIO,
     				PNACCION => PNACCION,
+    				PNCODIGOCARRERA => PNCODIGOCARRERA,
     				MENSAJEERROR => MENSAJEERROR
   					);
   

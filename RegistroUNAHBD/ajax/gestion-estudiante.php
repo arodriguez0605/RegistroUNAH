@@ -12,7 +12,7 @@
 										 $_POST["txt-cuenta"],$_POST["txt-correoelectronico"],
 										 $_POST["txt-direccion"],$_POST["txt-telefono"],
 										 $_POST["txt-password"],$_POST["txt-fechanacimiento"],
-										 $_POST["slc-centroEstudio"],$_POST["txt-fechaingreso"]);
+										 $_POST["slc-centroEstudio"],$_POST["txt-fechaingreso"],$_POST["slc-carreras"]);
 			
 			echo $_POST["slc-centroEstudio"];
 			$Estudiante->guardarEstudiante($conexion);

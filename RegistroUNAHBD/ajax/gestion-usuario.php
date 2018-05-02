@@ -1,8 +1,10 @@
 <?php
 
  session_start();
+?>
+ <?php 
 
-   include ('../class/class-conexion.php');
+  include ('../class/class-conexion.php');
    $conexion  = new Conexion();
    switch ($_GET["accion"]) {
    	case 'crear-usuario':
@@ -31,9 +33,9 @@
    		include ('../class/class-usuario.php');
          //$contrasena = $_POST["txt-password"];
          echo "llego a gestion.";
-         Usuario::consultar($conexion,$_POST["txt-cuenta"],$_POST["txt-password"]);
+         //Usuario::consultar($conexion,$_POST["txt-cuenta"],$_POST["txt-password"]);
 
-   		//Usuario::verificarUsuario($conexion,$_POST["txt-cuenta"],$_POST["txt-password"]);
+   		Usuario::verificarUsuario($conexion,$_POST["txt-cuenta"],$_POST["txt-password"]);
    		break;
    	default:
    		# code...

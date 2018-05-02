@@ -48,10 +48,9 @@
   					inner join Persona p on e.codigoPersona = p.codigoPersona
   					inner join CentroEstudio ce on ce.codigoCentroEstudio = e.codigoCentroEstudio
   					inner join Carrera ca on ce.codigoCentroEstudio = ca.codigoCentroEstudio
-  					where e.numeroCuenta = '%s' and u.contrasena='%s';",
-		    		$conexion->antiInyeccion($cuenta),
-		    		$conexion->antiInyeccion($contra)
-
+  					where e.numeroCuenta ='%s' and u.contrasena='%s'",
+  					$cuenta,
+  					$contra
 		    	);
 		    //echo ($sql);
 

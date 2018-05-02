@@ -92,22 +92,21 @@ $("#btn-iniciar-sesion-estudiante").click(function(){
         						
         					$("#div-prueba").html(respuesta);	
         					alert(respuesta);
-         					/*if(respuesta.estatus==1)
+         					if(respuesta.estatus==1)
          						{
           							alert("regreso.");
            						 
-             					 window.location = "registro.php";
+             					 window.location = "matriculaPrincipal.php";
             						
 						         }
          						else
            							{
             							alert("usuario no encontrado.");
-           							}*/
+           							}
         						},
 
         						error:function(e){
          						 $("#div-prueba").html(e);
-         						 alert(e);
          						 console.log(e);
          						 
        							 }
@@ -147,6 +146,15 @@ $("#slc-carreras").click(function(){
 
 $("#btn-registrarse").click(function(){
 
+
+
+if($("#txt-pnombre").val())
+{    
+	if($("#txt-papellido").val()){
+
+	  if($("#txt-cuenta").val()){
+
+	  	if($("#slc-centroEstudio").val()){
         var parametro = 
         "txt-pnombre="+$("#txt-pnombre").val()+"&"+
         "txt-snombre="+$("#txt-snombre").val()+"&"+
@@ -178,8 +186,22 @@ $("#btn-registrarse").click(function(){
            console.log(e);
         }
 
- });
+    });
+	  }
+	  else{
 
+              alert("Seleccione un centroEstudio.");
+	   }
+
+	  }
+
+	  else{alert("Ingrese Un numero de Cuenta.");}
+    }
+     else{
+     	alert("Ingrese Primer Apellido.");
+     }
+ }
+  else{alert("Ingrese Primer Nombre");}
  });
 
 

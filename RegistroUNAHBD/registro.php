@@ -156,71 +156,71 @@
         <div class="form-group row">
           <label for="example-text-input" class="col-2 col-form-label">Primer Nombre</label>
             <div class="col-10">
-              <input class="form-control" type="text" value="" name="pnombre" example-text-input">
+              <input class="form-control" type="text" id="txt-pnombre" value="" name="pnombre" example-text-input">
             </div>
         </div>
 
         <div class="form-group row">
           <label for="example-text-input" class="col-2 col-form-label">Segundo Nombre</label>
             <div class="col-10">
-              <input class="form-control" type="text" value="" name="snombre" example-text-input">
+              <input class="form-control" type="text" value="" id="txt-snombre" name="snombre" example-text-input">
             </div>
         </div>
 
                 <div class="form-group row">
           <label for="example-text-input" class="col-2 col-form-label">Primer Apellido</label>
             <div class="col-10">
-              <input class="form-control" type="text" value="" name="papellido" example-text-input">
+              <input class="form-control" type="text" value="" id="txt-papellido" name="papellido" example-text-input">
             </div>
         </div>
 
         <div class="form-group row">
           <label for="example-text-input" class="col-2 col-form-label">Segundo Apellido</label>
             <div class="col-10">
-              <input class="form-control" type="text" value="" name="sapellido" example-text-input">
+              <input class="form-control" type="text" value="" id="txt-sapellido" name="sapellido" example-text-input">
             </div>
         </div>
 
       <div class="form-group row">
         <label for="example-search-input" class="col-2 col-form-label">Cuenta</label>
       <div class="col-10">
-        <input class="form-control" type="" value=" " name="cuenta">
+        <input class="form-control" type="" value=" " id="txt-cuenta" name="cuenta">
   </div>
 </div>
 <div class="form-group row">
   <label for="example-email-input" class="col-2 col-form-label">Correo Electronico</label>
   <div class="col-10">
-    <input class="form-control" type="email" value="" name="correoElectronico">
+    <input class="form-control" type="email" id="txt-correoelectronico" value="" name="correoElectronico">
   </div>
 </div>
 <div class="form-group row">
   <label for="example-url-input" class="col-2 col-form-label">Dirección</label>
   <div class="col-10">
-    <input class="form-control" type="text" value="" name="direccion">
+    <input class="form-control" type="text" value="" id="txt-direccion" name="direccion">
   </div>
 </div>
 <div class="form-group row">
   <label for="example-tel-input" class="col-2 col-form-label">Teléfono</label>
   <div class="col-10">
-    <input class="form-control" type="tel" value="" name="telefono">
+    <input class="form-control" type="tel" value="" id="txt-telefono" name="telefono">
   </div>
 </div>
 <div class="form-group row">
   <label for="example-password-input" class="col-2 col-form-label">Contraseña</label>
   <div class="col-10">
-    <input class="form-control" type="password" value="" name="contrasena">
+    <input class="form-control" type="password" id="txt-password" value="" name="contrasena">
   </div>
 </div>
 <div class="form-group row">
   <label for="example-date-input" class="col-2 col-form-label">Fecha de nacimiento</label>
   <div class="col-10">
-    <input class="form-control" type="date" value="" name="fechaNacimiento">
+    <input class="form-control" type="date" id="txt-fechanacimiento" value="" name="fechaNacimiento">
   </div>
 </div>
 <div class="form-group row">
   <label for="example-tel-input" class="col-2 col-form-label">Centro de Estudio</label>
   <div class="col-10">
-      <select>
+      <select id="slc-centroEstudio">
       <option class="form-control" >Seleccione un centro de estudio</option>
           <option class="form-control" value="" id="centroEstudio" name="centroEstudio"</option>
       </select>
@@ -241,14 +241,14 @@
 <div class="form-group row">
   <label for="example-tel-input" class="col-2 col-form-label">Carrera</label>
   <div class="col-10">
-      <select>
+      <select id="slc-carreras">
       <option class="form-control" >Seleccione su carrera</option>
           <option class="form-control" value="" id="carrera" name="carrera"</option>
       </select>
   </div>
 </div>
 <div class="form-group row">
-  <label for="example-tel-input" class="col-2 col-form-label">Facultad</label>
+  <label for="example-tel-input"  class="col-2 col-form-label">Facultad</label>
   <div class="col-10">
     <label class="form-control" type="example-text-input" id="facultad" name="facultad">
   </div>
@@ -256,13 +256,13 @@
 <div class="form-group row">
   <label for="example-date-input" class="col-2 col-form-label">Fecha de Ingreso</label>
   <div class="col-10">
-    <input class="form-control" type="date" value="" name="fechaIngreso">
+    <input class="form-control" id="txt-fechaingreso" type="date" value="" name="fechaIngreso">
   </div>
 </div>
 
             <!-- For success/fail messages -->
                       <div class="container-login100-form-btn">
-            <button class="login100-form-btn">
+            <button id="btn-registrarse" class="login100-form-btn">
               Registrarse
             </button>
           </div>
@@ -286,7 +286,7 @@
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+    <script type="text/javascript" src="js/jmfunciones.js"></script>
   </body>
 
 </html>

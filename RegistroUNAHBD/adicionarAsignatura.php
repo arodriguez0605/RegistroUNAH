@@ -1,3 +1,4 @@
+<!--@arodriguez0605 -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -9,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Forma 03 - UNAH</title>
+    <title>Login Catedrático - UNAH</title>
     <link rel="icon" href="img/imgunah/logo.png" sizes="24x24" type="image/svg">
 
 
@@ -20,16 +21,6 @@
   <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
   <link rel="stylesheet" type="text/css" href="css/util.css">
   <link rel="stylesheet" type="text/css" href="css/main.css">
-
-  <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-  <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
-  <link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
-  <link rel="stylesheet" type="text/css" href="css/util (2).css">
-  <link rel="stylesheet" type="text/css" href="css/main (2).css">
-
-
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -70,9 +61,7 @@
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
                 <a class="dropdown-item" href="loginestudiante.php">Estudiante</a>
                 <a class="dropdown-item" href="logincatedratico.php">Catedrático</a>
-        <!--        <a class="dropdown-item" href="portfolio-3-col.html"></a>
-                <a class="dropdown-item" href="portfolio-4-col.html">4 Column Portfolio</a>
-                <a class="dropdown-item" href="portfolio-item.html">Single Portfolio Item</a> -->
+
               </div>
            <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -88,99 +77,95 @@
         </div>
       </div>
     </nav>
+    
 <body>
-<br><br>
+  
+ <div class="container">
+  <h2>Form control: select</h2>
+  <form>
+    <div class="form-group">
+      <table border="1em">
+<thead>
+<tr>
+<td>Departamento</td>
+<td>asignatura</td>
+<td>Seccion</td></tr>
+</thead>
+<tbody>
+<tr><td><select size="10" style="width: 120px">
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="opel">Opel</option>
+  <option value="audi">Audi</option>
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="opel">Opel</option>
+  <option value="audi">Audi</option>
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="opel">Opel</option>
+  <option value="audi">Audi</option>
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="opel">Opel</option>
+  <option value="audi">Audi</option>
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="opel">Opel</option>
+  <option value="audi">Audi2</option>
+</select></td>
+<td><select size="10" style="width: 120px">
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="opel">Opel</option>
+  <option value="audi">Audi</option>
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="opel">Opel</option>
+  <option value="audi">Audi</option>
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="opel">Opel</option>
+  <option value="audi">Audi</option>
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="opel">Opel</option>
+  <option value="audi">Audi</option>
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="opel">Opel</option>
+  <option value="audi">Audi2</option>
+</select></td>
+<td><select size="10" style="width: 120px">
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="opel">Opel</option>
+  <option value="audi">Audi</option>
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="opel">Opel</option>
+  <option value="audi">Audi</option>
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="opel">Opel</option>
+  <option value="audi">Audi</option>
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="opel">Opel</option>
+  <option value="audi">Audi</option>
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="opel">Opel</option>
+  <option value="audi">Audi2</option>
+</select>
+</td>
+</tbody>
+</table>
 
-    <div class="container-table100">
-          <span class="login100-form-title">
-            Forma 03<br>
-          </span>  
-          
-
-      <div class="wrap-table100">
-        <div class="table100 ver1 m-b-110">
-
-          <div class="table100-head">
-            <table>
-              <thead>
-                <tr class="row100 head">
-                  <th class="cell100 column1">Asignatura</th>
-                  <th class="cell100 column2">Código</th>
-                  <th class="cell100 column3">Horario</th>
-                  <th class="cell100 column4">Catedrático</th>
-                  <th class="cell100 column5">Aula</th>
-                  <th class="cell100 column5">UVS</th>
-                </tr>
-              </thead>
-            </table>
-          </div>
-
-          <div class="table100-body js-pscroll">
-            <table>
-              <tbody>
-                <tr class="row100 body">
-                  <td class="cell100 column1"></td>
-                  <td class="cell100 column2"></td>
-                  <td class="cell100 column3"></td>
-                  <td class="cell100 column4"></td>
-                  <td class="cell100 column5"></td>
-                </tr>
-
-                <tr class="row100 body">
-                  <td class="cell100 column1"></td>
-                  <td class="cell100 column2"></td>
-                  <td class="cell100 column3"></td>
-                  <td class="cell100 column4"></td>
-                  <td class="cell100 column5"></td>
-                </tr>
-
-                <tr class="row100 body">
-                  <td class="cell100 column1"></td>
-                  <td class="cell100 column2"></td>
-                  <td class="cell100 column3"></td>
-                  <td class="cell100 column4"></td>
-                  <td class="cell100 column5"></td>
-                </tr>
-
-                <tr class="row100 body">
-                  <td class="cell100 column1"></td>
-                  <td class="cell100 column2"></td>
-                  <td class="cell100 column3"></td>
-                  <td class="cell100 column4"></td>
-                  <td class="cell100 column5"></td>
-                </tr>
-
-                <tr class="row100 body">
-                  <td class="cell100 column1"></td>
-                  <td class="cell100 column2"></td>
-                  <td class="cell100 column3"></td>
-                  <td class="cell100 column4"></td>
-                  <td class="cell100 column5"></td>
-                </tr>
-
-                <tr class="row100 body">
-                  <td class="cell100 column1"></td>
-                  <td class="cell100 column2"></td>
-                  <td class="cell100 column3"></td>
-                  <td class="cell100 column4"></td>
-                  <td class="cell100 column5"></td>
-                </tr>
-
-                <tr class="row100 body">
-                  <td class="cell100 column1"></td>
-                  <td class="cell100 column2"></td>
-                  <td class="cell100 column3"></td>
-                  <td class="cell100 column4"></td>
-                  <td class="cell100 column5"></td>
-                </tr>
-
- 
-              </tbody>
-            </table>
-          </div>
-       </div> </div></div>
-
-
+    </div>
+  </form>
+</div>
+  
       <!-- Footer -->
     <footer class="py-5 bg-dark">
       <div class="container">
@@ -189,7 +174,8 @@
       <!-- /.container -->
     </footer>
 
-
+  
+<!--===============================================================================================-->  
   <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->
   <script src="vendor/bootstrap/js/popper.js"></script>
@@ -198,13 +184,12 @@
   <script src="vendor/select2/select2.min.js"></script>
 <!--===============================================================================================-->
   <script src="vendor/tilt/tilt.jquery.min.js"></script>
-  
   <script >
     $('.js-tilt').tilt({
       scale: 1.1
     })
   </script>
-  <script src="js/main (2).js"></script>
+  <script src="js/main.js"></script>
 
 </body>
 </html>

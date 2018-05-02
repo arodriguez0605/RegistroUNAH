@@ -32,7 +32,6 @@
    case 'login':
    		include ('../class/class-usuario.php');
          //$contrasena = $_POST["txt-password"];
-         echo "llego a gestion.";
          //Usuario::consultar($conexion,$_POST["txt-cuenta"],$_POST["txt-password"]);
 
    		Usuario::verificarUsuario($conexion,$_POST["txt-cuenta"],$_POST["txt-password"]);
@@ -41,11 +40,4 @@
    		# code...
    		break;
    }
-?>
-
-
-
-
-
-
 ?>

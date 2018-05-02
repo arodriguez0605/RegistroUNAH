@@ -83,7 +83,7 @@ $("#btn-iniciar-sesion-estudiante").click(function(){
 
 
 
-              if ($("#txt-cuenta").val()=="20151002122") {
+            /*  if ($("#txt-cuenta").val()=="20151002122") {
 
                     if ($("#txt-password").val()=="1234") {
 
@@ -96,39 +96,34 @@ $("#btn-iniciar-sesion-estudiante").click(function(){
               else
               {
                 alert("usuario incorrecto")
-              }
-					 /*var parametros = "txt-cuenta="+$("#txt-cuenta").val()+"&"+"txt-password="+$("#txt-password").val();
-
+              }*/
+					 var parametros = "txt-cuenta="+$("#txt-cuenta").val()+"&"+"txt-password="+$("#txt-password").val();
+          
        						$.ajax({
         					url:"ajax/gestion-usuario.php?accion=login",
        						 data: parametros,
        						 method:"POST",
+        					 dataType:'json',
         					
-        					success:function(respuesta){
-        						
-        					$("#div-prueba").html(respuesta);	
-        					alert(respuesta);
+                  success: function(respuesta){
          					if(respuesta.estatus==1)
          						{
-          							alert("regreso.");
-           						 
-             					 window.location = "matriculaPrincipal.php";
-            						
+             					 window.location = "principalMatricula.php";
 						         }
          						else
            							{
             							alert("usuario no encontrado.");
            							}
         						},
-
-        						error:function(e){
-         						 $("#div-prueba").html(e);
+        						
+                    error:function(e){
+                      
          						 console.log(e);
          						 
        							 }
 
        							});
-                    */
+                    
      							 }
      			}
 	else{

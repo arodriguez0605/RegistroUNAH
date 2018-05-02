@@ -48,16 +48,21 @@
   					inner join Persona p on e.codigoPersona = p.codigoPersona
   					inner join CentroEstudio ce on ce.codigoCentroEstudio = e.codigoCentroEstudio
   					inner join Carrera ca on ce.codigoCentroEstudio = ca.codigoCentroEstudio
-  					where e.numeroCuenta ='%s' and u.contrasena='%s'",
-  					$cuenta,
-  					$contra
+  					where e.numeroCuenta =".$cuenta." and u.contrasena='".$contra."'"
+  					
+  					
 		    	);
 		    //echo ($sql);
 
 		    $resultado = $conexion->ejecutarConsulta($sql);
-		    $cantidadRegistros = $conexion->cantidadRegistros($resultado);
+		   // $cantidadRegistros = $conexion->cantidadRegistros($resultado); 
+		   	$numrows = oci_fetch_all($resultado, $res);
+
+
+
 		    $respuesta=array();
-		    if ($cantidadRegistros==1){
+		    
+		    if ($numrows==1){
 		    	$fila = $conexion->obtenerFila($resultado);
 		    	$respuesta["estatus"]=1;
 		    	$_SESSION["NUMEROCUENTA"] = $fila["NUMEROCUENTA"];
@@ -65,10 +70,11 @@
                  $_SESSION["PAPELLIDO"] = $fila["PAPELLIDO"];
                  $_SESSION["NOMBRECENTRO"] = $fila["NOMBRECENTRO"];
                  $_SESSION["NOMBRECARRERA"] = $fila["NOMBRECARRERA"];
-		    	$respuesta["CODIGOROL"]=$fila["CODIGOROL"];
-		    }else{
+		    	$_SESSION["CODIGOROL"]=$fila["CODIGOROL"];
+		    }
+		    else{
 		    	$respuesta["estatus"]=0;
-			}
+			  }
     
 		    echo json_encode($respuesta);
 

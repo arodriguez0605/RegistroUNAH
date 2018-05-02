@@ -79,7 +79,7 @@
                 Descargar
               </a>
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
-                <a class="dropdown-item" href="#">Manual de usuario</a>
+                <a class="dropdown-item" href="manualUsuario.pdf">Manual de usuario</a>
               </div>
 
               </div>

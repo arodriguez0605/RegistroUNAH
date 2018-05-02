@@ -33,7 +33,8 @@
 
 
 		public function antiInyeccion($texto){
-			return PDO::prepare($this->link, $texto);
+		//[INDENT] return str_replace("'", "\'", $texto); [/INDENT] 
+
 		}
 
 		public function cantidadRegistros($resultado){

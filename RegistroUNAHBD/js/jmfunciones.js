@@ -125,7 +125,7 @@ $("#btn-iniciar-sesion-estudiante").click(function(){
 
 $("#slc-carreras").click(function(){
 
-        var parametro = "slc-carreras="+ $('#slc-carreras').val();
+        var parametro = "slc-carreras="+$('#slc-carreras').val();
 		$.ajax({
  		url:"ajax/getInfo.php?accion=facultades",
         data:parametro,
@@ -142,3 +142,44 @@ $("#slc-carreras").click(function(){
  });
 
  });
+
+
+
+$("#btn-registrarse").click(function(){
+
+        var parametro = 
+        "txt-pnombre="+$("#txt-pnombre").val()+"&"+
+        "txt-snombre="+$("#txt-snombre").val()+"&"+
+        "txt-papellido="+$("#txt-papellido").val()+"&"+
+        "txt-sapellido="+$("#txt-sapellido").val()+"&"+
+		"txt-cuenta="+$("#txt-cuenta").val()+"&"+
+		"txt-correoelectronico="+$("#txt-correoelectronico").val()+"&"+
+		"txt-direccion="+$("#txt-direccion").val()+"&"+
+        "txt-telefono="+$("#txt-telefono").val()+"&"+
+        "txt-password="+$("#txt-password").val()+"&"+
+        "txt-fechanacimiento="+$("#txt-fechanacimiento").val()+"&"+
+        "slc-centroEstudio="+$("#slc-centroEstudio").val()+"&"+
+        "txt-ciudad="+$("#ciudad").val()+"&"+
+        "txt-departamento"+$("#departamento").val()+"&"+
+        "slc-carreras="+$("#slc-carreras").val()+"&"+
+        "txt-facultdad="+$("#facultad").val()+"&"+
+        "txt-fechaingreso="+$("#txt-fechaingreso").val()+"&"+"accion1 = guardar";
+		
+		$.ajax({		
+ 		url:"ajax/gestion-estudiante.php?accion1=guardar",
+        data:parametro,
+        method:"POST",
+        success:function(respuesta){
+
+          alert(respuesta);
+        },
+        error:function(e){
+
+           console.log(e);
+        }
+
+ });
+
+ });
+
+

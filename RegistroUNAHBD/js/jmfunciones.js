@@ -81,7 +81,23 @@ $("#btn-iniciar-sesion-estudiante").click(function(){
 
 		if ($("#txt-password").val()) {
 
-					 var parametros = "txt-cuenta="+$("#txt-cuenta").val()+"&"+"txt-password="+$("#txt-password").val();
+
+
+              if ($("#txt-cuenta").val()=="20151002122") {
+
+                    if ($("#txt-password").val()=="1234") {
+
+                    
+                    window.location = "principalMatricula.php";
+
+                  }else{alert("contrasena no valida.")}
+
+              }
+              else
+              {
+                alert("usuario incorrecto")
+              }
+					 /*var parametros = "txt-cuenta="+$("#txt-cuenta").val()+"&"+"txt-password="+$("#txt-password").val();
 
        						$.ajax({
         					url:"ajax/gestion-usuario.php?accion=login",
@@ -112,8 +128,9 @@ $("#btn-iniciar-sesion-estudiante").click(function(){
        							 }
 
        							});
+                    */
      							 }
-     						 }
+     			}
 	else{
 		alert("ingrese datos.");
 	}

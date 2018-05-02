@@ -109,7 +109,7 @@
           <img src="img/imgunah/logo2.png" alt="IMG"> 
         </div>
 
-        <form class="login100-form validate-form">
+       <!-- <form class="login100-form validate-form">-->
           <span class="login100-form-title">
             Inicio de sesión | Estudiante
           </span>
@@ -131,7 +131,7 @@
           </div>
           
           <div class="container-login100-form-btn">
-            <button class="login100-form-btn" id="btn-iniciar-sesion-estudiante">
+            <button  class="login100-form-btn" id="btn-iniciar-sesion-estudiante">
               Iniciar sesión
             </button>
           </div>
@@ -151,7 +151,7 @@
               <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
             </a>
           </div>
-        </form>
+        <!--</form>-->
       </div>
     </div>
   </div>
@@ -176,7 +176,7 @@
   <script src="vendor/select2/select2.min.js"></script>
 <!--===============================================================================================-->
   <script src="vendor/tilt/tilt.jquery.min.js"></script>
-  <!--<script >
+  <script >
     $('.js-tilt').tilt({
       scale: 1.1
     })

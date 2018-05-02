@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Login Estudiante - UNAH</title>
+    <title>Login Catedrático - UNAH</title>
     <link rel="icon" href="img/imgunah/logo.png" sizes="24x24" type="image/svg">
 
 
@@ -61,9 +61,7 @@
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
                 <a class="dropdown-item" href="loginestudiante.php">Estudiante</a>
                 <a class="dropdown-item" href="logincatedratico.php">Catedrático</a>
-        <!--        <a class="dropdown-item" href="portfolio-3-col.html"></a>
-                <a class="dropdown-item" href="portfolio-4-col.html">4 Column Portfolio</a>
-                <a class="dropdown-item" href="portfolio-item.html">Single Portfolio Item</a> -->
+
               </div>
            <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -79,71 +77,102 @@
         </div>
       </div>
     </nav>
+    
 <body>
   
-  <div class="limiter">
-    <div class="container-login100">
-      <div class="wrap-login100">
-        <div class="login100-pic js-tilt" data-tilt> 
-          <img src="img/imgunah/logo2.png" alt="IMG"> 
-        </div>
+ <div class="container">
+  <h2>Form control: select</h2>
+  <form>
+    <div class="form-group">
+      <table border="1em">
+<thead>
+<tr>
+<td>Departamento</td>
+<td>asignatura</td>
+<td>Seccion</td></tr>
+</thead>
+<tbody>
+<tr><td><select size="10" style="width: 120px">
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="opel">Opel</option>
+  <option value="audi">Audi</option>
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="opel">Opel</option>
+  <option value="audi">Audi</option>
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="opel">Opel</option>
+  <option value="audi">Audi</option>
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="opel">Opel</option>
+  <option value="audi">Audi</option>
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="opel">Opel</option>
+  <option value="audi">Audi2</option>
+</select></td>
+<td><select size="10" style="width: 120px">
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="opel">Opel</option>
+  <option value="audi">Audi</option>
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="opel">Opel</option>
+  <option value="audi">Audi</option>
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="opel">Opel</option>
+  <option value="audi">Audi</option>
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="opel">Opel</option>
+  <option value="audi">Audi</option>
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="opel">Opel</option>
+  <option value="audi">Audi2</option>
+</select></td>
+<td><select size="10" style="width: 120px">
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="opel">Opel</option>
+  <option value="audi">Audi</option>
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="opel">Opel</option>
+  <option value="audi">Audi</option>
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="opel">Opel</option>
+  <option value="audi">Audi</option>
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="opel">Opel</option>
+  <option value="audi">Audi</option>
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="opel">Opel</option>
+  <option value="audi">Audi2</option>
+</select>
+</td>
+</tbody>
+</table>
 
-        <form class="login100-form validate-form">
-          <span class="login100-form-title">
-            Inicio de sesión | Estudiante
-          </span>
-
-          <div class="wrap-input100 validate-input" data-validate = "Cuenta requerida">
-            <input class="input100" type="text" name="cuenta" placeholder="Cuenta">
-            <span class="focus-input100"></span>
-            <span class="symbol-input100">
-              <i class="fa fa-user-circle-o" aria-hidden="true"></i>
-            </span>
-          </div>
-
-          <div class="wrap-input100 validate-input" data-validate = "Contraseña requerida">
-            <input class="input100" type="password" name="contraseña" placeholder="Contraseña">
-            <span class="focus-input100"></span>
-            <span class="symbol-input100">
-              <i class="fa fa-lock" aria-hidden="true"></i>
-            </span>
-          </div>
-          
-          <div class="container-login100-form-btn">
-            <button class="login100-form-btn">
-              Iniciar sesión
-            </button>
-          </div>
-
-          <div class="text-center p-t-12">
-            <span class="txt1">
-              Olvidaste
-            </span>
-            <a class="txt2" href="#">
-              ¿Tu Cuenta / Contraseña?
-            </a>
-          </div>
-
-          <div class="text-center p-t-136">
-            <a class="txt2" href="registro.php">
-              Registrarse
-              <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
-            </a>
-          </div>
-        </form>
-      </div>
     </div>
-  </div>
+  </form>
+</div>
   
-        <!-- Footer -->
+      <!-- Footer -->
     <footer class="py-5 bg-dark">
       <div class="container">
         <p class="m-0 text-center text-white">Base de Datos I &copy; Proyecto final 2018</p>
       </div>
       <!-- /.container -->
     </footer>
-
-  
 
   
 <!--===============================================================================================-->  
@@ -160,7 +189,6 @@
       scale: 1.1
     })
   </script>
-<!--===============================================================================================-->
   <script src="js/main.js"></script>
 
 </body>

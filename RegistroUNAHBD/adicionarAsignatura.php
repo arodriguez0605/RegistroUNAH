@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Login Catedrático - UNAH</title>
+    <title>Adicionar asignatura - UNAH</title>
     <link rel="icon" href="img/imgunah/logo.png" sizes="24x24" type="image/svg">
 
 
@@ -77,94 +77,55 @@
         </div>
       </div>
     </nav>
-    
 <body>
-  
- <div class="container">
-  <h2>Form control: select</h2>
-  <form>
-    <div class="form-group">
-      <table border="1em">
-<thead>
-<tr>
-<td>Departamento</td>
-<td>asignatura</td>
-<td>Seccion</td></tr>
-</thead>
-<tbody>
-<tr><td><select size="10" style="width: 120px">
-  <option value="volvo">Volvo</option>
-  <option value="saab">Saab</option>
-  <option value="opel">Opel</option>
-  <option value="audi">Audi</option>
-  <option value="volvo">Volvo</option>
-  <option value="saab">Saab</option>
-  <option value="opel">Opel</option>
-  <option value="audi">Audi</option>
-  <option value="volvo">Volvo</option>
-  <option value="saab">Saab</option>
-  <option value="opel">Opel</option>
-  <option value="audi">Audi</option>
-  <option value="volvo">Volvo</option>
-  <option value="saab">Saab</option>
-  <option value="opel">Opel</option>
-  <option value="audi">Audi</option>
-  <option value="volvo">Volvo</option>
-  <option value="saab">Saab</option>
-  <option value="opel">Opel</option>
-  <option value="audi">Audi2</option>
-</select></td>
-<td><select size="10" style="width: 120px">
-  <option value="volvo">Volvo</option>
-  <option value="saab">Saab</option>
-  <option value="opel">Opel</option>
-  <option value="audi">Audi</option>
-  <option value="volvo">Volvo</option>
-  <option value="saab">Saab</option>
-  <option value="opel">Opel</option>
-  <option value="audi">Audi</option>
-  <option value="volvo">Volvo</option>
-  <option value="saab">Saab</option>
-  <option value="opel">Opel</option>
-  <option value="audi">Audi</option>
-  <option value="volvo">Volvo</option>
-  <option value="saab">Saab</option>
-  <option value="opel">Opel</option>
-  <option value="audi">Audi</option>
-  <option value="volvo">Volvo</option>
-  <option value="saab">Saab</option>
-  <option value="opel">Opel</option>
-  <option value="audi">Audi2</option>
-</select></td>
-<td><select size="10" style="width: 120px">
-  <option value="volvo">Volvo</option>
-  <option value="saab">Saab</option>
-  <option value="opel">Opel</option>
-  <option value="audi">Audi</option>
-  <option value="volvo">Volvo</option>
-  <option value="saab">Saab</option>
-  <option value="opel">Opel</option>
-  <option value="audi">Audi</option>
-  <option value="volvo">Volvo</option>
-  <option value="saab">Saab</option>
-  <option value="opel">Opel</option>
-  <option value="audi">Audi</option>
-  <option value="volvo">Volvo</option>
-  <option value="saab">Saab</option>
-  <option value="opel">Opel</option>
-  <option value="audi">Audi</option>
-  <option value="volvo">Volvo</option>
-  <option value="saab">Saab</option>
-  <option value="opel">Opel</option>
-  <option value="audi">Audi2</option>
-</select>
-</td>
-</tbody>
-</table>
+    <div class="container-login100">
 
+<body>
+ <div>    
+          <span class="login100-form-title">
+              Adicionar Asignaturas<br>
+          </span>  
+          <span class="selectAsignaturas">
+            <select class="selectpicker" >
+              <optgroup label="Ingenieria en Sistemas">
+                <option>Seleccione el area de la asignatura</option>
+                <option>ola</option>
+                <option>keaase</option>
+              </optgroup>
+              <optgroup label="Lenguas Extranjeras">
+                <option>ola</option>
+                <option>ke</option>
+                <option>ase</option>
+              </optgroup>
+            </select>
+          </span>
+
+          <span class="selectAsignaturas">
+            <select class="selectpicker" >
+                <option>Seleccione la asignatura</option>
+                <option>ola</option>
+                <option>keaase</option>
+                <option>ola</option>
+                <option>ke</option>
+                <option>ase</option>
+            </select>
+          </span>
+
+          <span class="selectAsignaturas">
+            <select class="selectpicker" >
+                <option>Seleccione la sección</option>
+                <option>ola</option>
+                <option>keaase</option>
+                <option>ola</option>
+                <option>ke</option>
+                <option>ase</option>
+            </select>
+          </span>
+
+        </div>
+      </div>
     </div>
-  </form>
-</div>
+  </div>
   
       <!-- Footer -->
     <footer class="py-5 bg-dark">

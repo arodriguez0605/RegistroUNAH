@@ -16,13 +16,14 @@ $.ajax({
  });
 
 
-	$.ajax({
- url:"ajax/getInfo.php?accion=carreras",
+
+    $.ajax({
+ url:"ajax/getInfo.php?accion=departamentoclase",
         data:"",
         method:"POST",
         success:function(respuesta){
 
-          $("#slc-carreras").html(respuesta);
+          $("#slc-departamento").html(respuesta);
         },
         error:function(e){
 
@@ -31,6 +32,8 @@ $.ajax({
 
  });
 
+    
+
 });
 
 
@@ -38,7 +41,7 @@ $.ajax({
 
 $("#slc-centroEstudio").click(function(){
 
-        var parametro = "slc-centroEstudio="+ $('#slc-centroEstudio').val();
+    var parametro = "slc-centroEstudio="+ $('#slc-centroEstudio').val();
 		$.ajax({
  		url:"ajax/getInfo.php?accion=departamentos",
         data:parametro,
@@ -61,6 +64,22 @@ $("#slc-centroEstudio").click(function(){
         success:function(respuesta){
 
           $("#ciudad").html(respuesta);
+        },
+        error:function(e){
+
+           console.log(e);
+        }
+
+ });
+
+  parametros = "slc-centroEstudio="+$("#slc-centroEstudio").val();
+  $.ajax({
+ url:"ajax/getInfo.php?accion=carreras",
+        data:parametros,
+        method:"POST",
+        success:function(respuesta){
+
+          $("#slc-carreras").html(respuesta);
         },
         error:function(e){
 
@@ -158,7 +177,7 @@ $("#slc-carreras").click(function(){
 
 $("#btn-registrarse").click(function(){
 
-
+alert($("#txt-fechanacimiento").val());
 
 if($("#txt-pnombre").val())
 {    
@@ -192,6 +211,7 @@ if($("#txt-pnombre").val())
         success:function(respuesta){
 
           alert(respuesta);
+          window.location = "principalMatricula.php";
         },
         error:function(e){
 
@@ -217,3 +237,43 @@ if($("#txt-pnombre").val())
  });
 
 
+$("#slc-departamento").click(function(){
+
+    var parametro = "slc-departamento="+ $('#slc-departamento').val();
+    $.ajax({
+    url:"ajax/getInfo.php?accion=asignaturas",
+        data:parametro,
+        method:"POST",
+        success:function(respuesta){
+
+          $("#slc-asignatura").html(respuesta);
+        },
+        error:function(e){
+
+           console.log(e);
+        }
+
+ });
+
+});
+
+
+$("#slc-asignatura").click(function(){
+
+    var parametro = "slc-asignatura="+ $('#slc-asignatura').val();
+    $.ajax({
+    url:"ajax/getInfo.php?accion=seccion",
+        data:parametro,
+        method:"POST",
+        success:function(respuesta){
+
+          $("#slc-seccion").html(respuesta);
+        },
+        error:function(e){
+
+           console.log(e);
+        }
+
+ });
+
+});

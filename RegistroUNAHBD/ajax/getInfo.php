@@ -20,7 +20,7 @@
 
 		case 'carreras':
 		include('../class/class-carrera.php');
-		Carrera::obtenerCarreras($conexion);
+		Carrera::obtenerCarreras($conexion,$_POST["slc-centroEstudio"]);
 		break;
 
 		case 'facultades':
@@ -28,6 +28,20 @@
 			Facultad::obtenerFacultad($conexion,$_POST["slc-carreras"]);
 			break;
 
+		case'departamentoclase':
+				include('../class/class-departamento-carrera.php');
+				DepartamentoCarrera::obtenerDepartamentoCarrera($conexion);	
+               break;
+
+        case 'asignaturas':
+        
+        	include('../class/class-asignatura.php');       
+        	Asignatura::obtenerAsignaturas($conexion,$_POST["slc-departamento"]);
+        break;
+
+        case'seccion':
+        	include('../class/class-seccion.php');
+        	Seccion::obtenerSecciones($conexion,$_POST["slc-asignatura"]);
 		default:
 			echo "Acción inválida";
 			break;

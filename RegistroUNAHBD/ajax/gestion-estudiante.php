@@ -7,11 +7,12 @@
 		
 		case'guardar':
 			include("../class/class-estudiante.php");
+			$contrasena = sha1($_POST["txt-password"]);
 			$Estudiante = new Estudiante($_POST["txt-pnombre"],$_POST["txt-snombre"],
 										 $_POST["txt-papellido"],$_POST["txt-sapellido"],
 										 $_POST["txt-cuenta"],$_POST["txt-correoelectronico"],
 										 $_POST["txt-direccion"],$_POST["txt-telefono"],
-										 $_POST["txt-password"],$_POST["txt-fechanacimiento"],
+										 $contrasena,$_POST["txt-fechanacimiento"],
 										 $_POST["slc-centroEstudio"],$_POST["txt-fechaingreso"],$_POST["slc-carreras"]);
 			
 			echo $_POST["slc-centroEstudio"];

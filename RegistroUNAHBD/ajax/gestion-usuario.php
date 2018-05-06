@@ -31,10 +31,10 @@
 
    case 'login':
    		include ('../class/class-usuario.php');
-         //$contrasena = $_POST["txt-password"];
+         $contrasena = sha1($_POST["txt-password"]);
          //Usuario::consultar($conexion,$_POST["txt-cuenta"],$_POST["txt-password"]);
 
-   		Usuario::verificarUsuario($conexion,$_POST["txt-cuenta"],$_POST["txt-password"]);
+   		Usuario::verificarUsuario($conexion,$_POST["txt-cuenta"],$contrasena);
    		break;
    	default:
    		# code...

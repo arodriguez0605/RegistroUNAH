@@ -1,8 +1,14 @@
 <!--@arodriguez0605 -->
-<?php
-session_start();
-?>
+<!--<?php
+//session_start();
 
+//if(!(isset($_SESSION["PNOMBRE"])))
+   {
+  //   header('location: index.php');
+   }
+
+?>
+-->
 
 
 <!DOCTYPE html>
@@ -74,6 +80,11 @@ session_start();
               </a>
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
                 <a class="dropdown-item" href="manualUsuario.pdf">Manual de usuario</a>
+                <a href="">
+                <?php
+                echo $_SESSION["PNOMBRE"]
+                ?>
+              </a>
               </div>
 
               </div>
@@ -94,7 +105,7 @@ session_start();
 
 <div>
           <div class="container-login100-form-btn">
-            <button class="login100-form-btn" onclick="location.href='.php'">
+            <button class="login100-form-btn" onclick="location.href='adicionarAsignatura.php'">
               Adicionar Asignatura
             </button>
           </div>

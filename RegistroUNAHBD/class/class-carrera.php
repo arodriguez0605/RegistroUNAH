@@ -57,9 +57,9 @@
 				" CodigoDepartamento: " . $this->codigoDepartamento;
 		}
        
-       static public function obtenerCarreras($conexion){
+       static public function obtenerCarreras($conexion,$centroEstudio){
 
-          $resultado = $conexion->ejecutarConsulta('SELECT * FROM Carrera');
+          $resultado = $conexion->ejecutarConsulta("SELECT * FROM Carrera where codigoCentroEstudio =".$centroEstudio."");
             while (($fila= $conexion->obtenerFila($resultado))) {
 				
 				echo '<option value='.$fila['CODIGOCARRERA'].'>'.$fila['NOMBRECARRERA'].' </option>';

@@ -1,5 +1,4 @@
 <?php
-
 	class Usuario{
 
 		private $codigoUsuario;
@@ -43,12 +42,14 @@
 
 		public static function verificarUsuario($conexion,$cuenta,$contra){
 		    $sql = sprintf(
-		    		"SELECT e.numeroCuenta,p.pNombre,p.pApellido,ce.nombreCentro,ca.nombreCarrera,u.CodigoRol from usuario u
-  					inner join Estudiante e on u.CODIGOUSUARIO = e.CODIGOUSUARIO
-  					inner join Persona p on e.codigoPersona = p.codigoPersona
-  					inner join CentroEstudio ce on ce.codigoCentroEstudio = e.codigoCentroEstudio
-  					inner join Carrera ca on ce.codigoCentroEstudio = ca.codigoCentroEstudio
-  					where e.numeroCuenta =".$cuenta." and u.contrasena='".$contra."'"
+		   "SELECT e.numeroCuenta,p.pNombre,p.pApellido,ce.nombreCentro,ca.nombreCarrera,u.CodigoRol from usuario u
+  		 	inner join Estudiante e on u.CODIGOUSUARIO = e.CODIGOUSUARIO
+            inner join Persona p on e.codigoPersona = p.codigoPersona
+            inner join CentroEstudio ce on ce.codigoCentroEstudio = e.codigoCentroEstudio
+            inner join ESTUDIANTEXPLANESTUDIO exp on e.CODIGOESTUDIANTE = exp.CODIGOESTUDIANTE
+            inner join PlanEStudios pe on exp.CODIGOPLANESTUDIO=pe.CODIGOPLANESTUDIO
+            inner join CARRERA ca on pe.CODIGOCARRERA = ca.CODIGOCARRERA
+            where e.NUMEROCUENTA=".$cuenta." and u.CONTRASENA='".$contra."'"
   					
   					
 		    	);
@@ -66,7 +67,7 @@
 		    	$fila = $conexion->obtenerFila($resultado);
 		    	$respuesta["estatus"]=1;
 		    	$_SESSION["NUMEROCUENTA"] = $fila["NUMEROCUENTA"];
-		    	$_SESSION["PNOMBRE"] = $fila["PNOMBRE"];
+		    	$_SESSION["PNOMBRE"] = "JonathanS";
                  $_SESSION["PAPELLIDO"] = $fila["PAPELLIDO"];
                  $_SESSION["NOMBRECENTRO"] = $fila["NOMBRECENTRO"];
                  $_SESSION["NOMBRECARRERA"] = $fila["NOMBRECARRERA"];

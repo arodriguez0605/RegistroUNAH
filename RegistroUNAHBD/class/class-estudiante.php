@@ -132,63 +132,31 @@
 
 		public function guardarEstudiante($conexion){
 			$sql = sprintf(
-				" DECLARE
-  					PNCODIGOPERSONA NUMBER;
-  					PCPNOMBRE VARCHAR2(200);
-  					PCSNOMBRE VARCHAR2(200);
-  					PCPAPELLIDO VARCHAR2(200);
-  					PCSAPELLIDO VARCHAR2(200);
-  					PCDIRECCION VARCHAR2(200);
-  					PCGENERO VARCHAR2(200);
- 					PDFECHANACIMIENTO DATE;
-  					PNCODIGOESTUDIANTE NUMBER;
-  					PNNUMEROCUENTA NUMBER;
- 					 PDFECHAINGRESO DATE;
- 					 PNCODIGOUSUARIO NUMBER;
-  					PNCODIGOCENTROESTUDIO NUMBER;
-  					PNACCION NUMBER;
-  					PNCODIGOCARRERA NUMBER;
-  					MENSAJEERROR VARCHAR2(200);
-			BEGIN
-  					PNCODIGOPERSONA := NULL;
- 					 PCPNOMBRE := '".$this->pNOmbre."';
-  					PCSNOMBRE := '".$this->sNombre."';
-  					PCPAPELLIDO := '".$this->pApellido."';
-  					PCSAPELLIDO := '".$this->sApellido."';
- 					 PCDIRECCION := '".$this->direccion."';
-  					PCGENERO := NULL;
-  					PDFECHANACIMIENTO := '".$this->fechaNacimiento."';
-  					PNCODIGOESTUDIANTE := NULL;
-  					PNNUMEROCUENTA :='".$this->cuenta."';
-  					PDFECHAINGRESO := '".$this->fechaIngreso."';
-  					PNCODIGOUSUARIO := NULL;
-  					PNCODIGOCENTROESTUDIO := ".$this->centroEstudio.";
-  					PNACCION := NULL;
-  					PNCODIGOCARRERA := ".$this->carrera.";
-
-  					SP_REGISTRO_DE_ESTUDIANTE(
-   					 PNCODIGOPERSONA => PNCODIGOPERSONA,
-    				PCPNOMBRE => PCPNOMBRE,
-    				PCSNOMBRE => PCSNOMBRE,
-    				PCPAPELLIDO => PCPAPELLIDO,
-    				PCSAPELLIDO => PCSAPELLIDO,
-    				PCDIRECCION => PCDIRECCION,
-    				PCGENERO => PCGENERO,
-    				PDFECHANACIMIENTO => PDFECHANACIMIENTO,
-    				PNCODIGOESTUDIANTE => PNCODIGOESTUDIANTE,
-    				PNNUMEROCUENTA => PNNUMEROCUENTA,
-    				PDFECHAINGRESO => PDFECHAINGRESO,
-    				PNCODIGOUSUARIO => PNCODIGOUSUARIO,
-    				PNCODIGOCENTROESTUDIO => PNCODIGOCENTROESTUDIO,
-    				PNACCION => PNACCION,
-    				PNCODIGOCARRERA => PNCODIGOCARRERA,
-    				MENSAJEERROR => MENSAJEERROR
+				" declare
+					mensaje varchar2(2000);
+					begin
+					SP_REGISTRO_DE_ESTUDIANTE(
+   					PNCODIGOPERSONA => '',
+    				PCPNOMBRE => '".$this->pNOmbre."',
+    				PCSNOMBRE => '".$this->sNombre."',
+    				PCPAPELLIDO => '".$this->pApellido."',
+    				PCSAPELLIDO => '".$this->sApellido."',
+    				PCDIRECCION => '',
+    				PCGENERO => '',
+    				PDFECHANACIMIENTO => TO_DATE('".$this->fechaNacimiento."', 'YYYY-MM-DD HH24:MI:SS'),
+    				PNCODIGOESTUDIANTE => '',
+    				PNNUMEROCUENTA => '".$this->cuenta."',
+    				PDFECHAINGRESO => TO_DATE('".$this->fechaIngreso."', 'YYYY-MM-DD HH24:MI:SS'),
+    				PNCODIGOCENTROESTUDIO => '".$this->centroEstudio."',
+    				PNACCION => '',
+    				PNCODIGOCARRERA => '".$this->carrera."',
+            		PCCONTRASENA => '".$this->contrasena."',
+            		PNCODIGOUSUARIO => '',
+    				MENSAJEERROR => Mensaje
   					);
-  
-  
-					--rollback; 
-					END;"
-				    );
+					end;
+
+				  ");
             
 			$resultado = $conexion->ejecutarConsulta($sql);
 			echo "Almacenado con éxito";

@@ -86,39 +86,21 @@
               Adicionar Asignaturas<br>
           </span>  
           <span class="selectAsignaturas">
-            <select class="selectpicker" >
-              <optgroup label="Ingenieria en Sistemas">
+            <select class="selectpicker" id="slc-departamento" >
                 <option>Seleccione el area de la asignatura</option>
-                <option>ola</option>
-                <option>keaase</option>
-              </optgroup>
-              <optgroup label="Lenguas Extranjeras">
-                <option>ola</option>
-                <option>ke</option>
-                <option>ase</option>
-              </optgroup>
             </select>
           </span>
 
-          <span class="selectAsignaturas">
-            <select class="selectpicker" >
+          <span class="selectAsignaturas" >
+            <select class="selectpicker" id="slc-asignatura">
                 <option>Seleccione la asignatura</option>
-                <option>ola</option>
-                <option>keaase</option>
-                <option>ola</option>
-                <option>ke</option>
-                <option>ase</option>
+                
             </select>
           </span>
 
           <span class="selectAsignaturas">
-            <select class="selectpicker" >
+            <select class="selectpicker" id="slc-seccion">
                 <option>Seleccione la sección</option>
-                <option>ola</option>
-                <option>keaase</option>
-                <option>ola</option>
-                <option>ke</option>
-                <option>ase</option>
             </select>
           </span>
 
@@ -151,6 +133,6 @@
     })
   </script>
   <script src="js/main.js"></script>
-
+  <script src="js/jmfunciones.js"></script>
 </body>
 </html>

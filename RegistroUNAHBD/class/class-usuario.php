@@ -42,7 +42,7 @@
 
 		public static function verificarUsuario($conexion,$cuenta,$contra){
 		    $sql = sprintf(
-		   "SELECT e.numeroCuenta,p.pNombre,p.pApellido,ce.nombreCentro,ca.nombreCarrera,u.CodigoRol from usuario u
+		   "SELECT * from usuario u
   		 	inner join Estudiante e on u.CODIGOUSUARIO = e.CODIGOUSUARIO
             inner join Persona p on e.codigoPersona = p.codigoPersona
             inner join CentroEstudio ce on ce.codigoCentroEstudio = e.codigoCentroEstudio
@@ -56,26 +56,29 @@
 		    //echo ($sql);
 
 		    $resultado = $conexion->ejecutarConsulta($sql);
+
 		   // $cantidadRegistros = $conexion->cantidadRegistros($resultado); 
 		   	$numrows = oci_fetch_all($resultado, $res);
 
 
 
 		    $respuesta=array();
-		    
+		   
 		    if ($numrows==1){
+		    	$resultado = $conexion->ejecutarConsulta($sql);
 		    	$fila = $conexion->obtenerFila($resultado);
 		    	$respuesta["estatus"]=1;
 		    	$_SESSION["NUMEROCUENTA"] = $fila["NUMEROCUENTA"];
-		    	$_SESSION["PNOMBRE"] = "JonathanS";
+		    	$_SESSION["PNOMBRE"] = $fila["PNOMBRE"];
                  $_SESSION["PAPELLIDO"] = $fila["PAPELLIDO"];
                  $_SESSION["NOMBRECENTRO"] = $fila["NOMBRECENTRO"];
                  $_SESSION["NOMBRECARRERA"] = $fila["NOMBRECARRERA"];
 		    	$_SESSION["CODIGOROL"]=$fila["CODIGOROL"];
+		    	
 		    }
 		    else{
 		    	$respuesta["estatus"]=0;
-			  }
+			 }
     
 		    echo json_encode($respuesta);
 

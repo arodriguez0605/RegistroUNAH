@@ -127,6 +127,7 @@ $("#btn-iniciar-sesion-estudiante").click(function(){
                   success: function(respuesta){
          					if(respuesta.estatus==1)
          						{
+                
              					 window.location = "principalMatricula.php";
 						         }
          						else

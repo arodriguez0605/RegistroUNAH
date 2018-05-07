@@ -1,14 +1,14 @@
 <!--@arodriguez0605 -->
-<!--<?php
-//session_start();
+<?php
+session_start();
 
-//if(!(isset($_SESSION["PNOMBRE"])))
+if(!(isset($_SESSION["PNOMBRE"])))
    {
-  //   header('location: index.php');
+     header('location: index.php');
    }
 
 ?>
--->
+
 
 
 <!DOCTYPE html>
@@ -80,15 +80,22 @@
               </a>
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
                 <a class="dropdown-item" href="manualUsuario.pdf">Manual de usuario</a>
-                <a href="">
+          
+              </div>
+              </div>
+            </li> 
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <?php
-                echo $_SESSION["PNOMBRE"]
+                  echo $_SESSION["PNOMBRE"].'  '.$_SESSION["NUMEROCUENTA"];
                 ?>
               </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+            
+          
               </div>
-
               </div>
-            </li>
+            </li> 
           </ul>
         </div>
       </div>

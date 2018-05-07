@@ -1,4 +1,5 @@
 <?php 
+session_start();
 	include("../class/class-conexion.php");
 	$conexion = new Conexion();
 	switch ($_GET["accion"]) {
@@ -42,6 +43,12 @@
         case'seccion':
         	include('../class/class-seccion.php');
         	Seccion::obtenerSecciones($conexion,$_POST["slc-asignatura"]);
+
+
+        case'detallematricula':
+        	include('../class/class-detalle-matricula.php');
+        	DetalleMatricula:: obtenerDetalleMatricula($conexion);
+        break;
 		default:
 			echo "Acción inválida";
 			break;

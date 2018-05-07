@@ -101,18 +101,29 @@
         <div class="table100 ver1 m-b-110">
 
           <div class="table100-head">
-            <table>
-              <thead>
-                <tr class="row100 head">
-                  <th class="cell100 column1">Asignatura</th>
-                  <th class="cell100 column2">Código</th>
-                  <th class="cell100 column3">Horario</th>
-                  <th class="cell100 column4">Catedrático</th>
-                  <th class="cell100 column5">Aula</th>
-                  <th class="cell100 column5">UVS</th>
-                </tr>
-              </thead>
-            </table>
+            <table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Codigo Asignatura</th>
+      <th scope="col">Nombre Asignatura</th>
+      <th scope="col">Seccion</th>
+      <th scope="col">Hora Inicio</th>
+      <th scope="col">Hora Fin</th>
+      <th scope="col">Aula</th>
+      <th scope="col">Edificio</th>
+    </tr>
+  </thead>
+  <tbody id="forma-03">
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+  </tbody>
+</table>
+
           </div>
 
           <div class="table100-body js-pscroll">
@@ -205,6 +216,6 @@
     })
   </script>
   <script src="js/main (2).js"></script>
-
+  <script src="js/jmfunciones.js"></script>
 </body>
 </html>

@@ -102,8 +102,9 @@
             <select class="selectpicker" id="slc-seccion">
                 <option>Seleccione la sección</option>
             </select>
-          </span>
 
+          </span>
+          <span class="selectAsignaturas"><button id="btn-agregar-asignatura" class="login100-form-btn">Agregar</button></span>
         </div>
       </div>
     </div>

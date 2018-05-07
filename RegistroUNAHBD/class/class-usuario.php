@@ -49,6 +49,7 @@
             inner join ESTUDIANTEXPLANESTUDIO exp on e.CODIGOESTUDIANTE = exp.CODIGOESTUDIANTE
             inner join PlanEStudios pe on exp.CODIGOPLANESTUDIO=pe.CODIGOPLANESTUDIO
             inner join CARRERA ca on pe.CODIGOCARRERA = ca.CODIGOCARRERA
+            inner join Historial h on e.codigoEstudiante = h.codigoEstudiante
             where e.NUMEROCUENTA=".$cuenta." and u.CONTRASENA='".$contra."'"
   					
   					
@@ -74,6 +75,8 @@
                  $_SESSION["NOMBRECENTRO"] = $fila["NOMBRECENTRO"];
                  $_SESSION["NOMBRECARRERA"] = $fila["NOMBRECARRERA"];
 		    	$_SESSION["CODIGOROL"]=$fila["CODIGOROL"];
+		    	$_SESSION["CODIGOHISTORIAL"]=$fila["CODIGOHISTORIAL"];
+		    	$_SESSION["CODESTUDIANTE"] = $fila["CODIGOESTUDIANTE"];
 		    	
 		    }
 		    else{
@@ -84,7 +87,7 @@
 
 		}
 
-
+    /*
 		public function registrarUsuario($conexion){
 			$sql = sprintf("INSERT INTO usuarios(nombre_usuario, nombre_persona, contrasenna, email, telefono, fecha_nacimiento, url_foto_perfl, ultima_conexion, seguidores, siguiendo, ID_genero, ID_tipo_usuario) VALUES('%s','%s','%s','%s',%s,'%s','%s','%s',%s,%s,%s,%s)",
 				$conexion->antiInyeccion($this->nombre_usuario),
@@ -108,9 +111,9 @@
 		}
 
 
+*/
 
-
-
+/*
 		public static function consultar($conexion,$cuenta,$contra){
 			$sql= sprintf("SELECT e.numeroCuenta,p.pNombre,p.pApellido,ce.nombreCentro,ca.nombreCarrera,u.CodigoRol from usuario u
   					inner join Estudiante e on u.CODIGOUSUARIO = e.CODIGOUSUARIO
@@ -132,7 +135,7 @@
 				echo "0";
 			}
 		}
-
+*/
 
 	}
 ?>

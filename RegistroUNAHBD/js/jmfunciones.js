@@ -32,6 +32,23 @@ $.ajax({
 
  });
 
+
+
+      $.ajax({
+ url:"ajax/getInfo.php?accion=detallematricula",
+        data:"",
+        method:"POST",
+        success:function(respuesta){
+
+          $("#forma-03").html(respuesta);
+        },
+        error:function(e){
+
+           console.log(e);
+        }
+
+ });
+
     
 
 });
@@ -127,7 +144,7 @@ $("#btn-iniciar-sesion-estudiante").click(function(){
                   success: function(respuesta){
          					if(respuesta.estatus==1)
          						{
-                
+
              					 window.location = "principalMatricula.php";
 						         }
          						else
@@ -278,3 +295,26 @@ $("#slc-asignatura").click(function(){
  });
 
 });
+
+
+$("#btn-agregar-asignatura").click(function(){
+
+    var parametro = "slc-departamento="+$("#slc-departamento").val()+"&slc-asignatura="+ $('#slc-asignatura').val()+"&slc-seccion="+$("#slc-seccion").val();
+    alert(parametro);
+    $.ajax({
+    url:"ajax/gestion-matricula.php?accion=agregar",
+        data:parametro,
+        method:"POST",
+        success:function(respuesta){
+
+          alert(respuesta);
+        },
+        error:function(e){
+
+           console.log(e);
+        }
+
+ });
+
+});
+

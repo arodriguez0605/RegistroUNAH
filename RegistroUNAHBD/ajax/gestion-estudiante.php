@@ -14,8 +14,7 @@
 										 $_POST["txt-direccion"],$_POST["txt-telefono"],
 										 $contrasena,$_POST["txt-fechanacimiento"],
 										 $_POST["slc-centroEstudio"],$_POST["txt-fechaingreso"],$_POST["slc-carreras"]);
-			
-			echo $_POST["slc-centroEstudio"];
+		
 			$Estudiante->guardarEstudiante($conexion);
 			break;
 

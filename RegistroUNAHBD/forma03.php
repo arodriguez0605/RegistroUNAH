@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+if(!(isset($_SESSION["PNOMBRE"])))
+   {
+     header('location: loginestudiante.php');
+   }
+
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">

@@ -228,8 +228,7 @@ if($("#txt-pnombre").val())
         method:"POST",
         success:function(respuesta){
 
-          alert(respuesta);
-          window.location = "principalMatricula.php";
+          window.location = "loginestudiante.php";
         },
         error:function(e){
 

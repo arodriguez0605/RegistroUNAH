@@ -299,7 +299,7 @@ $("#slc-asignatura").click(function(){
 $("#btn-agregar-asignatura").click(function(){
 
     var parametro = "slc-departamento="+$("#slc-departamento").val()+"&slc-asignatura="+ $('#slc-asignatura').val()+"&slc-seccion="+$("#slc-seccion").val();
-    alert(parametro);
+
     $.ajax({
     url:"ajax/gestion-matricula.php?accion=agregar",
         data:parametro,
